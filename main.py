@@ -1,17 +1,41 @@
+# Blackjack game implementation in Python.
+# A console-based card game where the player competes against a computer dealer
+# to achieve a hand value as close to 21 as possible without going over.
+
 import random
 import os
 
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
 def deal_card():
+    """Randomly select and return a card from the deck.
+
+    Returns:
+        int: The value of the drawn card (2-11, where 11 represents an Ace).
+    """
     return random.choice(cards)
 
 def adjust_ace(card_list, new_card):
+    """Adjust the value of an Ace (11) to 1 if adding 11 would cause a bust.
+
+    Args:
+        card_list (list): List of card values in the player's or dealer's hand.
+        new_card (int): The new card to be added (typically 11 for an Ace).
+
+    Returns:
+        int: The adjusted card value (1 or 11 for an Ace, otherwise the original value).
+    """
     if new_card == 11 and sum(card_list) + 11 > 21:
         return 1
     return new_card
 
 def print_result(user_cards, computer_cards):
+    """Display the final hands and scores for the player and the computer.
+
+    Args:
+        user_cards (list): List of card values in the player's hand.
+        computer_cards (list): List of card values in the computer's hand.
+    """
     print(f"Your final hand {user_cards}, final score {sum(user_cards)}")
     print(f"Computer final hand: {computer_cards}, score {sum(computer_cards)}")
 
@@ -71,9 +95,3 @@ while True:
         print("It's a draw")
     else:
         print("You lose")
-
-
-
-
-
-
