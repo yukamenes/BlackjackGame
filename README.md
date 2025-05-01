@@ -29,14 +29,17 @@ A simple console-based Blackjack card game implemented in Python 💻. The game 
    ```
 2. Follow the prompts:
    - Type `y` to start a new game or `n` to exit.
-   - During the game, type `y` to hit (draw another card) or `n` to stand (pass).
+   - During the game, type `y` to hit (draw another card) or `n` to pass.
 3. The game will display your cards, score, and the computer's first card. After the round, it shows the final hands and declares the winner 🏆.
+
+   ![Game Screenshot](images/screenshot.png)
 
 ## Project Structure 📂
 - `main.py`: The main Python script containing the game logic 🐍.
 - `.gitignore`: Ignores Python cache files and bytecode 🗑️.
 - `README.md`: This file, providing project documentation 📝.
 - `LICENSE`: CC0 1.0 Universal Public Domain Dedication license 📜.
+- `images/`: Folder containing screenshots of the game 📸.
 
 ## Rules 🎰
 - 🎯 The goal is to get a hand value as close to 21 as possible without going over.
@@ -46,6 +49,13 @@ A simple console-based Blackjack card game implemented in Python 💻. The game 
 - 🤖 The computer dealer must hit until their score is at least 17.
 - 💥 If you or the dealer exceeds 21, that player loses.
 - 🤝 If both have the same score, it's a draw.
+
+## What I Learned 📚
+- Built a console-based game using Python loops, conditionals, and lists to implement Blackjack logic 🐍.
+- Wrote reusable functions with docstrings to improve code readability and maintainability 📝.
+- Structured a GitHub repository with a comprehensive README, LICENSE, and .gitignore 🚀.
+- Handled user input with validation to ensure a smooth gaming experience 🎮.
+- Learned to enhance repository documentation by adding screenshots using Markdown and managing image assets on GitHub 📸.
 
 ## Contributing 🤝
 Contributions are welcome! Feel free to open an issue or submit a pull request with improvements or bug fixes 🚀.
